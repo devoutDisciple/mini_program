@@ -1,0 +1,20 @@
+<view class='all_content '>
+  <view class="cu-bar fixed bg-shadeTop" style="height:70px;padding-top:20px;">
+    <navigator class='action' style='margin-top:13px;' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text>
+    </navigator>
+  </view>
+  <view class="bg-img bg-mask padding-tb-xl shadow-blur" style="background-image: url({{logo_url}}); height:200px;">
+    <view class='padding-xl text-white '>
+      <view class="restaurants-list " style='margin-top:20px;'>
+        <view class="restaurants-info-image">
+          <image src="{{class_info.src}}" class="restaurants-image" />
+        </view>
+        <view class="restaurants-info">
+          <view class="restaurants-info-name text-lg padding-top-lg">{{class_info.name}}</view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+  </view>

@@ -1,0 +1,21 @@
+<view class="cu-custom bg-white" style="height:70px;">
+  <view class="cu-bar fixed " style="height:100px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <!-- <text class='icon-back'></text> -->
+      <image class='my_header_back' src='/zh_dianc/pages/images/back.png'></image>
+      返回
+    </navigator>
+    <view class='content' style='margin-top:38px;'>
+    </view>
+  </view>
+</view>
+<view class="container">
+    <button class="kf" openType="contact">
+        <image src="../images/zxkf1.png" style="height:90rpx;"></image>
+        <view>在线客服</view>
+    </button>
+    <button bindtap="tel" class="kf">
+        <image src="../images/telephone.png"></image>
+        <view>联系电话</view>
+    </button>
+</view>

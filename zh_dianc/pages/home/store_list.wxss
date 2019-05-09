@@ -1,0 +1,71 @@
+/* zh_dianc/pages/home/store_list.wxss */
+@import "/icon.wxss";
+@import "home.wxss";
+.all_content{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.restaurants-list{
+  font-size: 25rpx;
+  display: flex;
+  width: 100%;
+  padding: 10rpx 0;   
+  border-bottom: 1rpx solid #ECECEC;
+  /* color: #6D6D6D; */
+  margin-top:-10%;
+  justify-content: space-between;
+}
+.restaurants-info-name{
+  /* color: black; */
+  font-size: 35rpx;
+  margin-bottom: 10rpx;
+}
+.restaurants-image{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+}
+.restaurants-info{
+  margin: 15rpx;
+  flex: 1;
+}
+.restaurants-distribution{
+  display: flex;
+  width: 100rpx;
+  margin-right:20rpx; 
+}
+.restaurants-info-rating{
+  display: flex;
+  flex-direction: column;
+  width: 350rpx;
+  height: 90rpx;
+  line-height: 20rpx;
+
+  
+}
+.restaurants-info-rating-stars{
+  /* color: #FFD161; */
+  width: 330rpx;
+  height: 30rpx;
+
+   
+}
+.restaurants-info-rating-sales{
+  width: 300rpx;
+  height: 30rpx;
+}
+.restaurants-info-price{
+    width: 300rpx;
+    height: 30rpx;
+    margin-top: 8px;
+ 
+}
+.restaurants-distribution{
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+

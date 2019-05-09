@@ -1,0 +1,25 @@
+<view class="cu-custom bg-white" style="height:70px;">
+  <view class="cu-bar fixed " style="height:100px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <!-- <text class='icon-back'></text> -->
+      <image class='my_header_back' src='/zh_dianc/pages/images/back.png'></image>
+      返回
+    </navigator>
+    <view class='content' style='margin-top:38px;'>
+    </view>
+  </view>
+</view>
+<view class="integral" wx:for="{{symx}}">
+    <image src="{{url}}{{link_logo}}" wx:if="{{item.son_id=='0'}}"></image>
+    <image src="{{item.img}}" wx:else></image>
+    <view class="integral-left">
+        <view wx:if="{{item.son_id=='0'}}">{{pt_name}}</view>
+        <view wx:else>{{item.name}}</view>
+        <view>{{item.time}}</view>
+    </view>
+    <view class="integral-right">
+        <text style="color:#6AC20B">+{{item.money}}<text class="integral-right1">元</text>
+        </text>
+    </view>
+</view>
+<view class="mygd">没有更多了哦~</view>

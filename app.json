@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "zh_dianc/pages/home/home",
+    "zh_dianc/pages/home/sjfl",
+    "zh_dianc/pages/logs/logs",
+    "zh_dianc/pages/home/sssj",
+    "zh_dianc/pages/home/webhtml",
+    "zh_dianc/pages/info/sjhj",
+    "zh_dianc/pages/dishinfo/dishinfo",
+    "zh_dianc/pages/order/order",
+    "zh_dianc/pages/coupons/coupons_details",
+    "zh_dianc/pages/coupons/shop_coupons",
+    "zh_dianc/pages/coupons/mine_coupons",
+    "zh_dianc/pages/info/info",
+    "zh_dianc/pages/list/list",
+    "zh_dianc/pages/list/choose/choose",
+    "zh_dianc/pages/list/reserveinfo/reserveinfo",
+    "zh_dianc/pages/list/waim/waim",
+    "zh_dianc/pages/index/index",
+    "zh_dianc/pages/index/getdl",
+    "zh_dianc/pages/dish/dish",
+    "zh_dianc/pages/reserve/reserve",
+    "zh_dianc/pages/reserve/reserveinfo",
+    "zh_dianc/pages/fukuan/fukuan",
+    "zh_dianc/pages/comment/comment",
+    "zh_dianc/pages/comsuc/comsuc",
+    "zh_dianc/pages/pay/pay",
+    "zh_dianc/pages/logs/kfzx",
+    "zh_dianc/pages/logs/integral",
+    "zh_dianc/pages/logs/wallet",
+    "zh_dianc/pages/logs/walletmx",
+    "zh_dianc/pages/logs/cash",
+    "zh_dianc/pages/logs/qd/qd",
+    "zh_dianc/pages/logs/qd/pm",
+    "zh_dianc/pages/logs/wyrz/authen",
+    "zh_dianc/pages/logs/wyrz/prise",
+    "zh_dianc/pages/integral/integral",
+    "zh_dianc/pages/integral/integralinfo/integralinfo",
+    "zh_dianc/pages/integral/record/record",
+    "zh_dianc/pages/logs/distribution/distribution",
+    "zh_dianc/pages/logs/distribution/yaoqing",
+    "zh_dianc/pages/logs/distribution/fxyj",
+    "zh_dianc/pages/logs/distribution/wdtd",
+    "zh_dianc/pages/logs/distribution/txmx",
+    "zh_dianc/pages/logs/distribution/symx",
+    "zh_dianc/pages/home/store_list"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于配送信息"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "雀送",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "zh_dianc/pages/home/home",
+        "text": "首页",
+        "iconPath": "we7/resource/images/home.png",
+        "selectedIconPath": "we7/resource/images/homeselect.png"
+      },
+      {
+        "pagePath": "zh_dianc/pages/list/list",
+        "text": "订单",
+        "iconPath": "we7/resource/images/hotel.png",
+        "selectedIconPath": "we7/resource/images/hotelselect.png"
+      },
+      {
+        "pagePath": "zh_dianc/pages/logs/logs",
+        "text": "我的",
+        "iconPath": "we7/resource/images/user.png",
+        "selectedIconPath": "we7/resource/images/userselect.png"
+      }
+    ]
+  }
+}

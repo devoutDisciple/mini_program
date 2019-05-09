@@ -1,0 +1,180 @@
+<view class="cu-custom" style="height:70px;">
+  <view class="cu-bar fixed bg-white" style="height:70px;padding-top:20px;">
+
+    <view class='content text-bold text-lg' style='margin-top:38px;'>
+      个人中心
+    </view>
+  </view>
+</view>
+
+<!-- 弹出层 -->
+<view class="hydlzhezhao" wx:if="{{hydl==true}}"></view>
+<view class="hydlbd" wx:if="{{hydl==true}}">
+  <view class="hydl">
+    <icon size="50" type="success"></icon>
+    <view>欢迎登录</view>
+  </view>
+  <button bindgetuserinfo="bindGetUserInfo" class="hydlqueren" openType="getUserInfo">确定</button>
+</view>
+
+
+<view class="font">
+  <!-- <view class="logs_header" style="background:{{color}}"> -->
+  <view class="logs_header  bg-white text-black">
+    <view class="logs_img" >
+     <image class="logs_imgs" src="{{avatarUrl}}"></image>
+      <view class="logs_name">
+        <view class="logs_name1">{{nickName}}</view>
+      </view>   
+    </view>
+ 
+      <navigator class="qd text-black" url="qd/qd" wx:if="{{qdset.is_open=='1'}}">
+        <image class='background-color:black;' src="../images/youxiao.png"></image>
+  
+        <view>签到领积分</view>
+      </navigator>
+   
+
+    
+  </view>
+
+
+
+  <view class="logs_content padding flex text-center text-grey bg-white shadow-warp">
+    <view bindtap="wallet" class="content_left flex flex-sub flex-direction solid-right">
+      <view class="content_left1">
+        <text class="content_font">{{wallet}}</text>
+        <text class="content_coll">元</text>
+      </view>
+      <view class="content_integral">钱包</view>
+    </view>
+    <view bindtap="youhui2" class="content_left flex flex-sub flex-direction solid-right">
+      <view class="content_middle">
+        <text class="content_font">{{coupon+Vouchers}}</text>
+        <text class="content_coll">个</text>
+      </view>
+      <view class="content_integral">优惠</view>
+    </view>
+    <view class="content_left flex-sub flex-direction">
+      <view bindtap="integral" class="content_right">
+        <text class="content_font">{{integral}}</text>
+        <text class="content_coll">分</text>
+      </view>
+      <view class="content_integral">积分</view>
+    </view>
+  </view>
+
+  <!-- 卡片布局 -->
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+    <view class="cu-item arrow">
+      <view class='content' data-url='my_hbkq_list/my_hbkq_list' bindtap='map' hover-class='none'>
+        <text class='icon-location text-grey'></text>
+        <text class='text-grey'>收货地址</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class='content' bindtap='czzx'>
+        <text class='icon-recharge text-grey'></text>
+        <text class='text-grey'>充值中心</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class='content' hover-class='none' bindtap='youhui'>
+        <text class='icon-ticket text-grey'></text>
+        <text class='text-grey'>领取优惠券</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class='content' bindtap='youhui2' hover-class='none'>
+        <text class='icon-ticket text-grey'></text>
+        <text class='text-grey'>我的优惠券 </text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class='content' bindtap='jfsc' hover-class='none'>
+        <text class='icon-present text-grey'></text>
+        <text class='text-grey'>积分商城 </text>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- <view class="logs_order">
+        <view bindtap="map" class="logs_center">
+            <view class="logs_centerimg">
+                <image class="center_map" src="../images/dizhi.png" style="height:40rpx;"></image>
+                <view class='icon-location'></view>
+                <view class='margin-left-sm'></view>
+            </view>
+            <image class="center_img" src="../images/Path@2x.png"></image>
+        </view>
+        <view bindtap="czzx" class="logs_center">
+            <view class="logs_centerimg">
+                <image class="center_map" src="../images/bankcard.png"></image>
+                    <view class='icon-recharge'></view>
+                <view class='margin-left-sm'>充值中心</view>
+            </view>
+            <image class="center_img" src="../images/Path@2x.png"></image>
+        </view>
+        <view bindtap="youhui" class="logs_center">
+            <view class="logs_centerimg">
+                <image class="center_map" src="../images/youhuiquan@2x.png"></image>
+                    <view class='icon-ticket'></view>
+                <view class='margin-left-sm'>领取优惠券</view>
+            </view>
+            <image class="center_img" src="../images/Path@2x.png"></image>
+        </view>
+        <view bindtap="youhui2" class="logs_center">
+            <view class="logs_centerimg">
+                <image class="center_map" src="../images/quan@3x.png"></image>
+                 <view class='icon-ticket'></view>
+                <view class='margin-left-sm'>我的优惠券</view>
+            </view>
+            <image class="center_img" src="../images/Path@2x.png"></image>
+        </view>
+        <view bindtap="jfsc" class="logs_center" wx:if="{{bqxx.is_jf=='1'}}">
+            <view class="logs_centerimg" hidden=''>
+                <image class="center_map" src="../images/jfsc.png"></image>
+                <view class='icon-present'></view>
+                <view class='margin-left-sm'>积分商城</view>
+            </view>
+            <image class="center_img" src="../images/Path@2x.png"></image>
+        </view>
+        <view bindtap="fx" class="logs_center" wx:if="{{fxset.is_open=='1'}}">
+            <view class="logs_centerimg">
+                <image class="center_map" src="../images/fxzx.png"></image>
+                <view>分销中心</view>
+            </view>
+            <image class="center_img" src="../images/Path@2x.png"></image>
+        </view>
+    </view> -->
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+    <view class="cu-item arrow">
+      <view class='content' data-url='my_hbkq_list/my_hbkq_list' bindtap='zxkf' hover-class='none'>
+        <text class='icon-service text-grey'></text>
+        <text class='text-grey'>在线客服</text>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="logs_seller">
+        <view bindtap="zxkf" class="logs_center">
+            <view class="logs_centerimg">
+                <image class="center_map" src="../images/zxkf.png"></image>
+                <view class='icon-service'></view>
+                <view class='margin-left-sm'>在线客服</view>
+            </view>
+            <image class="center_img" src="../images/Path@2x.png"></image>
+        </view> -->
+
+  <!-- <view bindtap="wyrz" class="logs_center" wx:if="{{bqxx.is_ruzhu=='1'}}">
+            <view class="logs_centerimg">
+                <image class="center_map" src="../images/ruzhu.png"></image>
+                <view>我要入驻</view>
+            </view>
+            <image class="center_img" src="../images/Path@2x.png"></image>
+        </view> -->
+  <!-- </view> -->
+
+
+
+</view>

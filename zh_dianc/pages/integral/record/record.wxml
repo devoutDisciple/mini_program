@@ -1,0 +1,31 @@
+<view class="cu-custom bg-white" style="height:70px;">
+  <view class="cu-bar fixed " style="height:100px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <!-- <text class='icon-back'></text> -->
+      <image class='my_header_back' src='/zh_dianc/pages/images/back.png'></image>
+      返回
+    </navigator>
+    <view class='content' style='margin-top:38px;'>
+    </view>
+  </view>
+</view>
+<block wx:if="{{score.length!=0}}">
+    <view class="integral" wx:for="{{score}}">
+        <view class="integral-left">
+            <image mode="aspectFit" src="{{url}}{{item.good_img}}"></image>
+            <view class="integral-left1">
+                <view>{{item.good_name}}</view>
+                <view>{{item.time}}</view>
+            </view>
+        </view>
+        <view class="integral-right">
+            <text style="color:#f44444">-{{item.integral}}<text class="integral-right1">分</text>
+            </text>
+        </view>
+    </view>
+    <view class="mygd">没有更多了哦~</view>
+</block>
+<view class="list_imgbk2" hidden="{{score.length!=0}}">
+    <image class="list_imgbk" src="../../images/list.png"></image>
+    <view class="list_imgbk3">您暂时还没有兑换记录哦！</view>
+</view>

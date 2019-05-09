@@ -1,0 +1,12 @@
+<view class="cu-custom bg-white" style="height:70px;">
+  <view class="cu-bar fixed " style="height:100px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <!-- <text class='icon-back'></text> -->
+      <image class='my_header_back' src='/zh_dianc/pages/images/back.png'></image>
+      返回
+    </navigator>
+    <view class='content' style='margin-top:38px;'>
+    </view>
+  </view>
+</view>
+<web-view src="{{vr}}"></web-view>

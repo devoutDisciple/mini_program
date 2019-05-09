@@ -1,0 +1,36 @@
+<view class="cu-custom bg-white" style="height:70px;">
+  <view class="cu-bar fixed " style="height:100px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <!-- <text class='icon-back'></text> -->
+      <image class='my_header_back' src='/zh_dianc/pages/images/back.png'></image>
+      返回
+    </navigator>
+    <view class='content' style='margin-top:38px;'>
+    </view>
+  </view>
+</view>
+<view class="wallet">
+    <view class="mywallet">
+        <view class="title">我的余额</view>
+        <view class="flex-bet mywallet_info">
+            <view class="flex-center">
+                <image class="wallet_img" src="../images/wallet.png"></image>
+                <view class="wallet_money">¥{{wallet}}</view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="tradeinfo" class="list flex-bet">
+        <view class="flex-center trade">
+            <image class="listimg" src="../images/order.png"></image>
+            <view class="">交易明细</view>
+        </view>
+        <image class="addright" src="../images/huise@2x.png"></image>
+    </view>
+    <view bindtap="cash" class="list flex-bet">
+        <view class="flex-center trade">
+            <image class="listimg" src="../images/bankcard.png"></image>
+            <view class="">去充值</view>
+        </view>
+        <image class="addright" src="../images/huise@2x.png"></image>
+    </view>
+</view>
